@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1c1c1c;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#planner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #292929 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+#task-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.task {
+  position: absolute;
+  padding: 15px;
+  background-color: #2f2f2f;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.2s;
+  z-index: 2;
+  width: 250px;
+  height: auto;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-header input {
+  width: 100%;
+  background: #404040;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 5px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.task input[type="time"],
+.task textarea {
+  width: 100%;
+  background: #404040;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 5px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.task textarea {
+  resize: none;
+  height: 50px;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#logo {
+  width: 60px;
+  height: 30px;
+}
+
+#logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+#add-task {
+  padding: 20px;
+  background-color: #606060;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin-left: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-task:hover {
+  background-color: #888;
+  transform: scale(1.1);
+}
+
+#add-task:before {
+  content: '+';
+}
+
+#clock {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  font-size: 18px;
+  background: #444;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#clock:hover {
+  background-color: #666;
+}
+
+#clock span {
+  font-size: 16px;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.task-buttons button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 50%;
+}
+
+.task-buttons button:hover {
+  background-color: #444;
+}
+
+.circle-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.circle-button:hover {
+  background-color: #666;
+}
+
+.circle-button svg {
+  width: 18px;
+  height: 18px;
+}
