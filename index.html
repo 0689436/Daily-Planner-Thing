@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowchart Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="planner">
+    <canvas id="background"></canvas>
+    <div id="task-container"></div>
+    <div id="image-container"></div>
+    <div id="header">
+      <div id="logo">
+        <svg viewBox="0 0 100 50">
+          <path
+            d="M20,25a20,20 0 1,1 40,0a20,20 0 1,1 -40,0"
+            fill="none"
+            stroke="#fff"
+            stroke-width="5"
+          />
+          <path
+            d="M40,25a20,20 0 1,0 40,0a20,20 0 1,0 -40,0"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+      <button id="add-task"></button>
+    </div>
+    <div id="clock">
+      <span>00:00:00</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
